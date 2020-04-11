@@ -1,0 +1,51 @@
+baseURL = "https://sotoy.github.io"
+languageCode = "en-us"
+title = "Sotoy"
+DefaultContentLanguage = "id"
+# theme = "book"
+
+# Book configuration
+# disablePathToLower = true
+# enableGitInfo = true
+
+# (Optional) If you provide a Disqus shortname, comments will be enabled on
+# all pages.
+disqusShortname = "sotoy"
+
+# Enable Emoji emoticons support for page content; see the Emoji Cheat Sheet.
+# Link = https://www.webfx.com/tools/emoji-cheat-sheet/
+enableEmoji = true
+
+uglyURLs = true
+
+[frontmatter]
+  date = ["date", "publishDate", "lastmod"]
+  lastmod = [":git", "lastmod", "date", "publishDate"]
+  publishDate = ["publishDate", "date"]
+  expiryDate = ["expiryDate"]
+
+[params]
+  # (Optional, default none) Set leaf bundle to render as side menu
+  # When not specified file structure and weights will be used
+  # BookMenuBundle = '/menu'
+  # BookMenuBundle = '/posts'
+
+  # (Optional, default docs) Specify section of content to render as menu
+  # You can also set value to '*' to render all sections to menu
+  # BookSection = 'posts'
+  # BookSection = 'posts'
+
+  # Set source repository location.
+  # Used for 'Last Modified' and 'Edit this page' links.
+  # BookRepo = 'https://github.com/alex-shpak/hugo-book'
+  BookRepo = 'https://github.com/zeihanaulia/sotoy'
+
+  # Enable "Edit this page" links for 'doc' page type.
+  # Disabled by default. Uncomment to enable. Requires 'BookRepo' param.
+  # Path must point to 'content' directory of repo.
+  BookEditPath = 'edit/master/content'
+
+  # Configure the date format used on the pages
+  # - In git information
+  # - In blog posts
+  BookDateFormat = '2006/01/02'
