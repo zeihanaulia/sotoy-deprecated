@@ -6,7 +6,7 @@ categories = [
 tags = [
     "natsio",
 ]
-date = "2020-05-01"
+date = "2020-04-30"
 +++
 
 Didunia software engineering jargon microservice terdengar keren. Dilingkaran software engineer gw, mereka berlomba lomba untuk mengimplementasi microservice dengan harapan service yang dibuatnya menjadi lebih "scalabel" kaya engineer engineer disilicon valley gitu gitu lah.
