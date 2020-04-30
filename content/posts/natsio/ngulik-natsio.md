@@ -159,13 +159,96 @@ Coba kita jalankan. Pertama jalankan program subsriber lalu program publisher. S
 2020/04/30 23:59:32  Pesan diterima dari [contoh.subject]: 'hello abc'
 ```
 
-#### Masalah masalah yang dihadapi
+### Masalah masalah yang dihadapi
 
-Raealitanya akan ada kemungkinan NATS server mati. Jika publisher yang mengakses tidak akan menjadi masalah, karena pasti akan dapat error. Akan tertapi apa yang terjari pada subsriber. Coba saja matikan servernya, lalu nyalakan kembali dan jalankan program publisher. Apa yang terjadi, Bahaya sekali bukan? Message yang dipublish tidak ada yang bisa diambil oleh subscriber. Kita akan banyak kehilangan data. Tapi tenang, NATS sudah ada solusinya.
+Raealitanya akan ada kemungkinan NATS server mati. Jika publisher yang mengakses tidak akan menjadi masalah, karena pasti akan dapat error. Akan tetapi apa yang akan terjadi pada subsriber?. Coba saja matikan servernya, lalu nyalakan kembali dan jalankan program publisher. Apa yang terjadi, Bahaya sekali bukan? Message yang dipublish tidak ada yang bisa diambil oleh subscriber. Kita akan banyak kehilangan data. Tapi tenang, NATS sudah ada solusinya.
+
+#### Menambahkan options reconnectiing
 
 ```go
+package main
+
+import (
+	"log"
+	"runtime"
+	"time"
+
+	"github.com/nats-io/nats.go"
+)
+
+func main() {
+	subject := "contoh.subject"
+	totalWait := 10 * time.Minute
+	reconnectDelay := time.Second
+
+	opts := []nats.Option{nats.Name("Contoh NATS Subsriber")}
+	opts = append(opts, nats.ReconnectWait(reconnectDelay))
+	opts = append(opts, nats.MaxReconnects(int(totalWait/reconnectDelay)))
+	opts = append(opts, nats.DisconnectErrHandler(func(nc *nats.Conn, err error) {
+		log.Printf("Disconnected due to:%s, will attempt reconnects for %.0fm", err, totalWait.Minutes())
+	}))
+	opts = append(opts, nats.ReconnectHandler(func(nc *nats.Conn) {
+		log.Printf("Reconnected [%s]", nc.ConnectedUrl())
+	}))
+	opts = append(opts, nats.ClosedHandler(func(nc *nats.Conn) {
+		log.Fatalf("Exiting: %v", nc.LastError())
+	}))
+
+	nc, err := nats.Connect(nats.DefaultURL, opts...)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	_, _ = nc.Subscribe(subject, func(msg *nats.Msg) {
+		log.Printf(" Pesan diterima dari [%s]: '%s'", msg.Subject, string(msg.Data))
+	})
+	nc.Flush()
+
+	log.Printf("Mendengarkan pada subject [%s]", subject)
+	runtime.Goexit()
+}
 
 ```
+
+Kode subscriber diatas ditambahkan beberapa options untuk melakukan reconnecting.
+
+```go
+opts = append(opts, nats.ReconnectWait(reconnectDelay))
+```
+
+`ReconnectWait(t time.Duration)` adalah fungsi yang mengeset waktu antara reconnect
+
+```go
+opts = append(opts, nats.MaxReconnects(int(totalWait/reconnectDelay)))
+```
+
+`MaxReconnects(max int)` adalah fungsi yang mengeset berapa kali maksimal usaha reconnecting berejalan
+
+```go
+opts = append(opts, nats.DisconnectErrHandler(func(nc *nats.Conn, err error) {
+    log.Printf("Disconnected due to:%s, will attempt reconnects for %.0fm", err, totalWait.Minutes())
+}))
+```
+
+`DisconnectErrHandler(cb ConnErrHandler)` ketika terjadi disconnect. kita bisa membuat log atau kode didalam handler.
+
+```go
+opts = append(opts, nats.ReconnectHandler(func(nc *nats.Conn) {
+    log.Printf("Reconnected [%s]", nc.ConnectedUrl())
+}))
+```
+
+`ReconnectHandler(cb ConnHandler)` handler ketika terjadi reconnect.
+
+```go
+opts = append(opts, nats.ClosedHandler(func(nc *nats.Conn) {
+    log.Fatalf("Exiting: %v", nc.LastError())
+}))
+```
+
+`ClosedHandler(cb ConnHandler)` ketika sudah mencapai maksimum usaha reconnecting sebaiknya diclose bisa si asumsikan server mati selamanya. diperlukan manusia untuk menyalakan.
+
+Sampai disini, kita sudah bisa bikin pub/sub menggunakan nats, dan ketika server mati sementara NATS akan mengulang reconnecting beberapa kali.
 
 Referensi:
 
