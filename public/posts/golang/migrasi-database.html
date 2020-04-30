@@ -1,0 +1,51 @@
+<!doctype html><html lang=id><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Migrasi database dengan golang"><meta property="og:title" content="Migrasi database dengan golang"><meta property="og:description" content="Akhir akhir ini terasa capek ketika membuat schema database langsung menggunakan GUI. Dan schema yang berubah bisa kadang kehilangan sejarahnya, kapan perubahannya tidak terawasi. Bagaimana jika skema database disatukan dengan source code aplikasi kita. Sehingga perkembangan skema database dapat tercatat sama seperti code.
+Dengan tools bernama migrate menjadi solusi untuk permasalahan diatas. alih alih kita langsung membuat tabel diGUI database, kita bikin dalam script yang nantinya dimasukan kedalam database juga."><meta property="og:type" content="article"><meta property="og:url" content="https://sotoy.github.io/posts/golang/migrasi-database.html"><meta property="article:published_time" content="2020-03-30T00:00:00+00:00"><meta property="article:modified_time" content="2020-03-30T00:00:00+00:00"><title>Migrasi database dengan golang | Sotoy</title><link rel=icon href=/favicon.png type=image/x-icon><link rel=stylesheet href=/book.min.edc993575be58655f3e49634e3ca6db09cc38ac9aa03ecdbe81d941636e35273.css integrity="sha256-7cmTV1vlhlXz5JY048ptsJzDismqA+zb6B2UFjbjUnM="><script defer src=/id.search.min.b3f12112f5a8b57538d48e13bcfbe8a4786bbcf5ed58800e9b56500f5e04f337.js integrity="sha256-s/EhEvWotXU41I4TvPvopHhrvPXtWIAOm1ZQD14E8zc="></script></head><body><input type=checkbox class=hidden id=menu-control><main class="container flex"><aside class=book-menu><nav><h2 class=book-brand><a href=/><span>Sotoy</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder aria-label maxlength=64 data-hotkeys=s/><div class="book-search-spinner spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><a href=/docs/about.html>Ini tuh apa?</a></li></ul><ul><li><a href=/posts.html>Blog</a></li></ul></nav><script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/svg/menu.svg class=book-icon alt=Menu></label>
+<strong>Migrasi database dengan golang</strong>
+<label for=toc-control><img src=/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><input type=checkbox class=hidden id=toc-control><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#install-golang-migrate>Install Golang Migrate</a></li><li><a href=#membuat-file-migrate>Membuat file migrate</a></li></ul></nav></aside></header><article class=markdown><h1><a href=/posts/golang/migrasi-database.html>Migrasi database dengan golang</a></h1><h5>2020/03/30</h5><div><a href=/categories/belajar.html>belajar</a></div><div><a href=/tags/golang.html>golang</a>,
+<a href=/tags/postgre.html>postgre</a></div><p><p>Akhir akhir ini terasa capek ketika membuat schema database langsung menggunakan GUI. Dan schema yang berubah bisa kadang kehilangan sejarahnya, kapan perubahannya tidak terawasi. Bagaimana jika skema database disatukan dengan source code aplikasi kita. Sehingga perkembangan skema database dapat tercatat sama seperti code.</p><p>Dengan tools bernama <a href=https://github.com/golang-migrate/migrate>migrate</a> menjadi solusi untuk permasalahan diatas. alih alih kita langsung membuat tabel diGUI database, kita bikin dalam script yang nantinya dimasukan kedalam database juga.</p><h2 id=install-golang-migrate>Install Golang Migrate</h2><p>Untuk pengguna mac os:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>brew install golang-migrate
+</code></pre></div><h2 id=membuat-file-migrate>Membuat file migrate</h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>    migrate create -ext sql -dir postgres/migrations create_categories
+    migrate create -ext sql -dir postgres/migrations create_products
+</code></pre></div><p>Kode diatas akan membuat file seperti ini</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>20200208175630_create_categories.down.sql
+20200208175630_create_categories.up.sql
+20200208175630_create_products.down.sql
+20200208175630_create_products.up.sql
+</code></pre></div><p>Bagian <code>.up</code> akan diisi dengan syntak <code>CREATE table</code> misal,</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>CREATE SEQUENCE categories_id_seq;
+CREATE TABLE categories <span style=color:#f92672>(</span>
+   id INTEGER NOT NULL DEFAULT nextval<span style=color:#f92672>(</span><span style=color:#e6db74>&#39;categories_id_seq&#39;</span><span style=color:#f92672>)</span>,
+   parent_id INTEGER,
+   name VARCHAR<span style=color:#f92672>(</span>255<span style=color:#f92672>)</span> NOT NULL,
+   created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW<span style=color:#f92672>()</span> NOT NULL,
+   created_by  INTEGER                                NOT NULL,
+   updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW<span style=color:#f92672>()</span> NOT NULL,
+   updated_by  INTEGER                                ,
+   deleted_at TIMESTAMP WITH TIME ZONE DEFAULT NULL,
+   deleted_by  INTEGER, 
+   PRIMARY KEY <span style=color:#f92672>(</span>id<span style=color:#f92672>)</span>
+<span style=color:#f92672>)</span>;
+ALTER SEQUENCE categories_id_seq
+OWNED BY categories.id;
+</code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>CREATE SEQUENCE products_id_seq;
+CREATE TABLE products <span style=color:#f92672>(</span>
+   id INTEGER NOT NULL,
+   category_id  INTEGER NOT NULL,
+   sku VARCHAR<span style=color:#f92672>(</span>255<span style=color:#f92672>)</span> NOT NULL,
+   name VARCHAR<span style=color:#f92672>(</span>255<span style=color:#f92672>)</span> NOT NULL,
+   price NUMERIC NOT NULL,
+   margin NUMERIC NOT NULL,
+   created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW<span style=color:#f92672>()</span> NOT NULL,
+   created_by  INTEGER                                NOT NULL,
+   updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW<span style=color:#f92672>()</span> NOT NULL,
+   updated_by  INTEGER                                ,
+   deleted_at TIMESTAMP WITH TIME ZONE DEFAULT NULL,
+   deleted_by  INTEGER,   
+   PRIMARY KEY <span style=color:#f92672>(</span>id<span style=color:#f92672>)</span>,
+   FOREIGN KEY <span style=color:#f92672>(</span>category_id<span style=color:#f92672>)</span> REFERENCES categories <span style=color:#f92672>(</span>id<span style=color:#f92672>)</span>
+<span style=color:#f92672>)</span>;
+ALTER SEQUENCE products_id_seq
+OWNED BY products.id;
+</code></pre></div><p>sedangkan bagian <code>.down</code> akan diisi dengan <code>DROP TABLE</code></p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>DROP TABLE categories;
+</code></pre></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>DROP TABLE products;
+</code></pre></div><p>Setelah itu tinggal jalankan command,</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>migrate -path <span style=color:#e6db74>&#34;repositories/postgres/migrations&#34;</span> -database <span style=color:#e6db74>&#34;</span>$DATA_SOURCE_NAME<span style=color:#e6db74>&#34;</span> up / down
+</code></pre></div><p>Selesai.</p></p></article><footer class=book-footer><div class="flex justify-between"><div><a class="flex align-center" href=https://github.com/zeihanaulia/sotoy/edit/master/content/posts/golang/migrasi-database.md target=_blank rel=noopener><img src=/svg/edit.svg class=book-icon alt=Edit>
+<span></span></a></div></div><div class=book-comments><div id=disqus_thread></div><script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return;}
+var d=document,s=d.createElement('script');s.async=true;s.src='//'+"sotoy"+'.disqus.com/embed.js';s.setAttribute('data-timestamp',+new Date());(d.head||d.body).appendChild(s);})();</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div></footer></div><aside class=book-toc><nav id=TableOfContents><ul><li><a href=#install-golang-migrate>Install Golang Migrate</a></li><li><a href=#membuat-file-migrate>Membuat file migrate</a></li></ul></nav></aside></main></body></html>
