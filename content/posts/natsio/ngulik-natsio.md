@@ -9,14 +9,14 @@ tags = [
 date = "2020-04-30"
 +++
 
-Didunia software engineering jargon microservice terdengar keren. Dilingkaran software engineer gw, mereka berlomba lomba untuk mengimplementasi microservice dengan harapan service yang dibuatnya menjadi lebih "scalabel" kaya engineer engineer disilicon valley gitu gitu lah.
-Salah satu topik yang seru untuk dibahas adalah messaging system dan merek yang tengah beresinar itu salah satunya [nats.io](https://nats.io/).
+Di dunia software engineering jargon microservice terdengar keren. Dilingkaran software engineer gw, mereka berlomba lomba untuk mengimplementasi microservice dengan harapan service yang dibuatnya menjadi lebih "scalable" kaya engineer engineer di silicon valley gitu gitu lah.
+Salah satu topik yang seru untuk dibahas adalah messaging system dan merek yang tengah bersinar itu salah satunya [nats.io](https://nats.io/).
 
-Kalau mau tau ceritanya tentang nats itu apa, bisa bacca di dokumentasinya [https://docs.nats.io/](https://docs.nats.io/). Dibagian introduction sudah dijelaskan secara jelas. Masalah apa saja yang dapat diselesaikan oleh nats.
+Kalau mau tau ceritanya tentang nats itu apa, bisa baca di dokumentasinya [https://docs.nats.io/](https://docs.nats.io/). Dibagian introduction sudah dijelaskan secara jelas. Masalah apa saja yang dapat diselesaikan oleh nats.
 
 > Btw, Emang kenapa sih harus pake messaging system? Emang kalo REST API biasa kenapa? gak boleh kah?
 
-Mengutip dari web [solace](https://solace.com/blog/experience-awesomeness-event-driven-microservices/). Salah satu pertimbangannya adalah Syncronous, komunikasi antar service secara Syncronous bisa saja, tapi jika balikan dari API terlalu lama, akan menyebabkan kegagalan.
+Mengutip dari web [solace](https://solace.com/blog/experience-awesomeness-event-driven-microservices/). Salah satu pertimbangannya tidak menggunakan REST API adalah Syncronous, komunikasi antar service secara Syncronous bisa saja, tapi jika balikan dari API terlalu lama, akan menyebabkan kegagalan.
 
 Untuk menyelesaikan masalah itu maka ditemukanlah messaging system yang keuntungannya.
 
@@ -25,10 +25,11 @@ Untuk menyelesaikan masalah itu maka ditemukanlah messaging system yang keuntung
 3. Sederhana untuk discale. 
 4. Lebih tahan dan error handling yang lebih baik.
 
+## Menginstal Nats
 
-## Nginstall Nats
+Cara dibawah ini menggunakan docker dan seharusnya docker sudah terinstal dengan benar. 
 
-Mestinya docker sudah terinstal dengan benar. Jalankan
+Jalankan:
 
 ```bash
 docker run --rm -p 4222:4222 -p 8222:8222 -p 6222:6222 --name nats-server -ti nats:latest
