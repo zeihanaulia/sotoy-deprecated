@@ -1,2 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Docs on Sotoy</title><link>https://sotoy.github.io/docs.html</link><description>Recent content in Docs on Sotoy</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><atom:link href="https://sotoy.github.io/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>Ini tuh apa?</title><link>https://sotoy.github.io/docs/about.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sotoy.github.io/docs/about.html</guid><description>Sotoy Driven Development Seperti yang tertulis pada subdomain dan judul website SOTOY. Tulisan disini berasal dari ke SOTOY-an gw. Kalo belum tau sotoy itu apa, sotoy itu singkatan dari kalimat Sok tau loe ya.
-&amp;ldquo;Sotoy&amp;rdquo; adalah salah satu dari sekian banyak kata gaul yang belakangan ini sedang ngetrend di sosmed, berasal dari gabungan dan plesetan kata &amp;ldquo;Sok tau loe ya&amp;rdquo; yang disingkat menjadi &amp;ldquo;Sotoy&amp;rdquo;, kata ini ditujukan untuk seseorang yang punya kebiasaan sok tau.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docs on Sotoy</title>
+    <link>https://sotoy.github.io/docs.html</link>
+    <description>Recent content in Docs on Sotoy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://sotoy.github.io/docs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ini tuh apa?</title>
+      <link>https://sotoy.github.io/docs/about.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sotoy.github.io/docs/about.html</guid>
+      <description>Sotoy Driven Development Seperti yang tertulis pada subdomain dan judul website SOTOY. Tulisan disini berasal dari ke SOTOY-an gw. Kalo belum tau sotoy itu apa, sotoy itu singkatan dari kalimat Sok tau loe ya.
+&amp;ldquo;Sotoy&amp;rdquo; adalah salah satu dari sekian banyak kata gaul yang belakangan ini sedang ngetrend di sosmed, berasal dari gabungan dan plesetan kata &amp;ldquo;Sok tau loe ya&amp;rdquo; yang disingkat menjadi &amp;ldquo;Sotoy&amp;rdquo;, kata ini ditujukan untuk seseorang yang punya kebiasaan sok tau.</description>
+    </item>
+    
+  </channel>
+</rss>

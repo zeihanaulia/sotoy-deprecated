@@ -1,4 +1,37 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>docker on Sotoy</title><link>https://sotoy.github.io/tags/docker.html</link><description>Recent content in docker on Sotoy</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 12 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sotoy.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml"/><item><title>Cara menggunakan docker</title><link>https://sotoy.github.io/posts/docker/cara-menggunakan-docker.html</link><pubDate>Sun, 12 Apr 2020 00:00:00 +0000</pubDate><guid>https://sotoy.github.io/posts/docker/cara-menggunakan-docker.html</guid><description>Sebelumnya pernah bikin tulisan bagaimana https://sotoy.github.io/posts/docker/docker-postgres.html install postgre sql menggunakan docker.</description></item><item><title>Install postgre pakai docker</title><link>https://sotoy.github.io/posts/docker/docker-postgres.html</link><pubDate>Fri, 27 Mar 2020 00:00:00 +0000</pubDate><guid>https://sotoy.github.io/posts/docker/docker-postgres.html</guid><description>Docker saat ini sudah menjadi normal yang baru dalam pengembangan perangkat lunak. Docker mempermudah kita sebagai pengembang dalam melakukan instalasi aplikasi. Teringat jaman dulu waktu awal-awal mengembangkan perangkat lunak, Harus menginstall sepertangkat pake aplikasi seperti XAMP atau LAMP untuk mempermudah instalasi.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>docker on Sotoy</title>
+    <link>https://sotoy.github.io/tags/docker.html</link>
+    <description>Recent content in docker on Sotoy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 12 Apr 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://sotoy.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Cara menggunakan docker</title>
+      <link>https://sotoy.github.io/posts/docker/cara-menggunakan-docker.html</link>
+      <pubDate>Sun, 12 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://sotoy.github.io/posts/docker/cara-menggunakan-docker.html</guid>
+      <description>Sebelumnya pernah bikin tulisan bagaimana install postgre sql menggunakan docker. Kali ini mau coba ginmana caranya menggunakan docker dan docker hubnya. Docker hub adalah salah satu layanan dari docker dimana kita dapat mencari dan membagi container images. Layanan ini bisa digunakan secara gratis dan berebayar. Cek aja disini kalo mau tau lebih lanjut.
+Tulisan kali ini ditujukan untuk dokumentasi cara menggunakan docker hub. Anggap kita sudah menginstall docker dikomputer kita masing masing.</description>
+    </item>
+    
+    <item>
+      <title>Install postgre pakai docker</title>
+      <link>https://sotoy.github.io/posts/docker/docker-postgres.html</link>
+      <pubDate>Fri, 27 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://sotoy.github.io/posts/docker/docker-postgres.html</guid>
+      <description>Docker saat ini sudah menjadi normal yang baru dalam pengembangan perangkat lunak. Docker mempermudah kita sebagai pengembang dalam melakukan instalasi aplikasi. Teringat jaman dulu waktu awal-awal mengembangkan perangkat lunak, Harus menginstall sepertangkat pake aplikasi seperti XAMP atau LAMP untuk mempermudah instalasi.
 Sekarang tidak perlu lagi, cukup menggunakan docker kita bisa menginstallnya.
 Installing Postgre SQL Untuk mendapatkan docker images container cukup mudah dengan code.
-docker pull postgres kode diatas akan mendownload postgre versi terakhir, kalau ingin versi yang spesifik bisa menggunakan code ini:</description></item></channel></rss>
+docker pull postgres kode diatas akan mendownload postgre versi terakhir, kalau ingin versi yang spesifik bisa menggunakan code ini:</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,10 +1,119 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on Sotoy</title><link>https://sotoy.github.io/posts.html</link><description>Recent content in Blog on Sotoy</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 12 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sotoy.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Cara menggunakan docker</title><link>https://sotoy.github.io/posts/docker/cara-menggunakan-docker.html</link><pubDate>Sun, 12 Apr 2020 00:00:00 +0000</pubDate><guid>https://sotoy.github.io/posts/docker/cara-menggunakan-docker.html</guid><description>Sebelumnya pernah bikin tulisan bagaimana https://sotoy.github.io/posts/docker/docker-postgres.html install postgre sql menggunakan docker.</description></item><item><title>Mencoba Rust System Programming Language</title><link>https://sotoy.github.io/posts/rust/mencoba-rust-system-programming-language.html</link><pubDate>Sun, 05 Apr 2020 00:00:00 +0000</pubDate><guid>https://sotoy.github.io/posts/rust/mencoba-rust-system-programming-language.html</guid><description>Sudah dari tahun 2018 kami sudah mendengar rust, terutama ketika AWS me-&amp;ldquo;Open Source&amp;rdquo; FireCraker - Engine Lambda, rust menjadi salah satu bahasa yang digadang-gadang saingan go. Ya meski tidak ada saingan diantara bahasa pemrograman, karena itu cuma alat bantu untuk menyelesaikan masalah. Baru ditahun ini ingin mencoba Rust, Karena ada kejenuhan dan ingin mencoba sesuatu yang baru.
-Sekilas baca buku Programming Rust, 2nd Edition, bagian Why Rust?. Yang kami tangkap disana itu Rust adalah</description></item><item><title>Migrasi database dengan golang</title><link>https://sotoy.github.io/posts/golang/migrasi-database.html</link><pubDate>Mon, 30 Mar 2020 00:00:00 +0000</pubDate><guid>https://sotoy.github.io/posts/golang/migrasi-database.html</guid><description>Akhir akhir ini terasa capek ketika membuat schema database langsung menggunakan GUI. Dan schema yang berubah bisa kadang kehilangan sejarahnya, kapan perubahannya tidak terawasi. Bagaimana jika skema database disatukan dengan source code aplikasi kita. Sehingga perkembangan skema database dapat tercatat sama seperti code.
-Dengan tools bernama migrate menjadi solusi untuk permasalahan diatas. alih alih kita langsung membuat tabel diGUI database, kita bikin dalam script yang nantinya dimasukan kedalam database juga.</description></item><item><title>Install postgre pakai docker</title><link>https://sotoy.github.io/posts/docker/docker-postgres.html</link><pubDate>Fri, 27 Mar 2020 00:00:00 +0000</pubDate><guid>https://sotoy.github.io/posts/docker/docker-postgres.html</guid><description>Docker saat ini sudah menjadi normal yang baru dalam pengembangan perangkat lunak. Docker mempermudah kita sebagai pengembang dalam melakukan instalasi aplikasi. Teringat jaman dulu waktu awal-awal mengembangkan perangkat lunak, Harus menginstall sepertangkat pake aplikasi seperti XAMP atau LAMP untuk mempermudah instalasi.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Sotoy</title>
+    <link>https://sotoy.github.io/posts.html</link>
+    <description>Recent content in Blog on Sotoy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 May 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://sotoy.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mengenal Context pada Golang</title>
+      <link>https://sotoy.github.io/posts/golang/mengenal-context.html</link>
+      <pubDate>Wed, 20 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://sotoy.github.io/posts/golang/mengenal-context.html</guid>
+      <description>Apa itu Context Golang context adalah standard libray muncul pertama kali pada versi 1.7. Tapi, sebenarnya package ini sudah ada dari dulu, ada di golang.org/x/net/context. Kita dapat menggunakan context untuk melakukan cancelation, timeouts dan passing value ke standard library lainnya. Seperti net, net/http, and os/exec.
+Apa sih yang dimaksud dengan cancelation  Analogi dari cancelation kurang lebih seperti ini. Misalnya, Andi meminta dibuatkan Bakso kepada Budi untuk acaranya. Budi segera mencari daging di pasar dan meminta tolong Cici untuk membeli perlatan makan plastik.</description>
+    </item>
+    
+    <item>
+      <title>Apa itu Knative</title>
+      <link>https://sotoy.github.io/posts/knative/apa-itu-knative.html</link>
+      <pubDate>Sun, 10 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://sotoy.github.io/posts/knative/apa-itu-knative.html</guid>
+      <description>Akhir akhir ini serverless sedang booming. Beberapa penyedia layanan cloud computing sudah menyediakan product serverless. Misalnya pada AWS, ada AWS Lambda dimana kita sebagai pengembang tinggal upload binary function ke AWS lambda. Lalu pada GCP ada Cloud Function mirip seperti AWS Lambda dan belum lama ini mulai ramai Cloud Run yang mana sebenernya Cloud Run itu adalah Knative.
+Knative sendiri berjalan diatas kubernetes atau extention dari kubernetes yang menjadi middleware untuk membuat aplikasi yang bisa berjalan dimanapun pada cloud yang menggunakan kubernetes.</description>
+    </item>
+    
+    <item>
+      <title>Error download library</title>
+      <link>https://sotoy.github.io/posts/rust/error-download-library.html</link>
+      <pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://sotoy.github.io/posts/rust/error-download-library.html</guid>
+      <description>Ada masalah ketika mencoba menggunakan library. Jadi ketika run syntax cargo run dapat hasil seperti ini
+Updating crates.io index error: failed to load source for a dependency on `actix` Caused by: Unable to update registry `https://github.com/rust-lang/crates.io-index` Caused by: failed to fetch `https://github.com/rust-lang/crates.io-index` Caused by: failed to authenticate when downloading repository attempted ssh-agent authentication, but none of the usernames `git` succeeded Caused by: no authentication available Coba googling dapet issue #2078 dari repository rustnya.</description>
+    </item>
+    
+    <item>
+      <title>Ngulik NATS io</title>
+      <link>https://sotoy.github.io/posts/natsio/ngulik-natsio.html</link>
+      <pubDate>Thu, 30 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://sotoy.github.io/posts/natsio/ngulik-natsio.html</guid>
+      <description>Di dunia software engineering jargon microservice terdengar keren. Dilingkaran software engineer gw, mereka berlomba lomba untuk mengimplementasi microservice dengan harapan service yang dibuatnya menjadi lebih &amp;ldquo;scalable&amp;rdquo; kaya engineer engineer di silicon valley gitu gitu lah. Salah satu topik yang seru untuk dibahas adalah messaging system dan merek yang tengah bersinar itu salah satunya nats.io.
+Kalau mau tau ceritanya tentang nats itu apa, bisa baca di dokumentasinya https://docs.nats.io/. Dibagian introduction sudah dijelaskan secara jelas.</description>
+    </item>
+    
+    <item>
+      <title>Cara menggunakan docker</title>
+      <link>https://sotoy.github.io/posts/docker/cara-menggunakan-docker.html</link>
+      <pubDate>Sun, 12 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://sotoy.github.io/posts/docker/cara-menggunakan-docker.html</guid>
+      <description>Sebelumnya pernah bikin tulisan bagaimana install postgre sql menggunakan docker. Kali ini mau coba ginmana caranya menggunakan docker dan docker hubnya. Docker hub adalah salah satu layanan dari docker dimana kita dapat mencari dan membagi container images. Layanan ini bisa digunakan secara gratis dan berebayar. Cek aja disini kalo mau tau lebih lanjut.
+Tulisan kali ini ditujukan untuk dokumentasi cara menggunakan docker hub. Anggap kita sudah menginstall docker dikomputer kita masing masing.</description>
+    </item>
+    
+    <item>
+      <title>Mencoba Rust System Programming Language</title>
+      <link>https://sotoy.github.io/posts/rust/mencoba-rust-system-programming-language.html</link>
+      <pubDate>Sun, 05 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://sotoy.github.io/posts/rust/mencoba-rust-system-programming-language.html</guid>
+      <description>Sudah dari tahun 2018 kami sudah mendengar rust, terutama ketika AWS me-&amp;ldquo;Open Source&amp;rdquo; FireCraker - Engine Lambda, rust menjadi salah satu bahasa yang digadang-gadang saingan go. Ya meski tidak ada saingan diantara bahasa pemrograman, karena itu cuma alat bantu untuk menyelesaikan masalah. Baru ditahun ini ingin mencoba Rust, Karena ada kejenuhan dan ingin mencoba sesuatu yang baru.
+Sekilas baca buku Programming Rust, 2nd Edition, bagian Why Rust?. Yang kami tangkap disana itu Rust adalah</description>
+    </item>
+    
+    <item>
+      <title>Migrasi database dengan golang</title>
+      <link>https://sotoy.github.io/posts/golang/migrasi-database.html</link>
+      <pubDate>Mon, 30 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://sotoy.github.io/posts/golang/migrasi-database.html</guid>
+      <description>Akhir akhir ini terasa capek ketika membuat schema database langsung menggunakan GUI. Dan schema yang berubah bisa kadang kehilangan sejarahnya, kapan perubahannya tidak terawasi. Bagaimana jika skema database disatukan dengan source code aplikasi kita. Sehingga perkembangan skema database dapat tercatat sama seperti code.
+Dengan tools bernama migrate menjadi solusi untuk permasalahan diatas. alih alih kita langsung membuat tabel diGUI database, kita bikin dalam script yang nantinya dimasukan kedalam database juga.</description>
+    </item>
+    
+    <item>
+      <title>Install postgre pakai docker</title>
+      <link>https://sotoy.github.io/posts/docker/docker-postgres.html</link>
+      <pubDate>Fri, 27 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://sotoy.github.io/posts/docker/docker-postgres.html</guid>
+      <description>Docker saat ini sudah menjadi normal yang baru dalam pengembangan perangkat lunak. Docker mempermudah kita sebagai pengembang dalam melakukan instalasi aplikasi. Teringat jaman dulu waktu awal-awal mengembangkan perangkat lunak, Harus menginstall sepertangkat pake aplikasi seperti XAMP atau LAMP untuk mempermudah instalasi.
 Sekarang tidak perlu lagi, cukup menggunakan docker kita bisa menginstallnya.
 Installing Postgre SQL Untuk mendapatkan docker images container cukup mudah dengan code.
-docker pull postgres kode diatas akan mendownload postgre versi terakhir, kalau ingin versi yang spesifik bisa menggunakan code ini:</description></item><item><title>Memahami GraphQL Pagination</title><link>https://sotoy.github.io/posts/graphql/graphql-pagination.html</link><pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate><guid>https://sotoy.github.io/posts/graphql/graphql-pagination.html</guid><description>Implementasi pagination atau bahasa indonesianya pemberian halaman pada data cukup berbeda. Biasanya cuma bikin ?page=1&amp;amp;limit=10 dimana pada query databasenya menjadi OFFSET 0 LIMIT 1. Pada GraphQL ada beberapa cara untuk melakukan pagination.
+docker pull postgres kode diatas akan mendownload postgre versi terakhir, kalau ingin versi yang spesifik bisa menggunakan code ini:</description>
+    </item>
+    
+    <item>
+      <title>Memahami GraphQL Pagination</title>
+      <link>https://sotoy.github.io/posts/graphql/graphql-pagination.html</link>
+      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://sotoy.github.io/posts/graphql/graphql-pagination.html</guid>
+      <description>Implementasi pagination atau bahasa indonesianya pemberian halaman pada data cukup berbeda. Biasanya cuma bikin ?page=1&amp;amp;limit=10 dimana pada query databasenya menjadi OFFSET 0 LIMIT 1. Pada GraphQL ada beberapa cara untuk melakukan pagination.
 Sumber Bacaan:
-BEST PRACTICES - Pagination- Paginating results with GraphQL</description></item><item><title>Membuat Aplikasi Pencatatan Keuangan dengan Golang dan GraphQL</title><link>https://sotoy.github.io/posts/graphql/graphql-multiple-result-for-error-handling.html</link><pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate><guid>https://sotoy.github.io/posts/graphql/graphql-multiple-result-for-error-handling.html</guid><description>GraphQL di tahun 2020 sudah menjadi normal baru didunia pengembangan perangkat lunak. Alat-alat atau pustaka untuk membangun GraphQL server sudah banyak sekali ada dibermacam-macam bahasa pemrogaman juga. Di tutorial kali ini, saya akan coba untuk membangun aplikasi menggunakan GraphQL sebagai penyedia datanya. Aplikasi yang akan dibangun adalah aplikasi pencatatan keuangan pribadi.
+ BEST PRACTICES - Pagination- Paginating results with GraphQL  </description>
+    </item>
+    
+    <item>
+      <title>Membuat Aplikasi Pencatatan Keuangan dengan Golang dan GraphQL</title>
+      <link>https://sotoy.github.io/posts/graphql/graphql-multiple-result-for-error-handling.html</link>
+      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://sotoy.github.io/posts/graphql/graphql-multiple-result-for-error-handling.html</guid>
+      <description>GraphQL di tahun 2020 sudah menjadi normal baru didunia pengembangan perangkat lunak. Alat-alat atau pustaka untuk membangun GraphQL server sudah banyak sekali ada dibermacam-macam bahasa pemrogaman juga. Di tutorial kali ini, saya akan coba untuk membangun aplikasi menggunakan GraphQL sebagai penyedia datanya. Aplikasi yang akan dibangun adalah aplikasi pencatatan keuangan pribadi.
 Gqlgen Gqlgen adalah salah satu pustaka yang dapat membantu kita membangun GraphQL Server.
-Memperpersiapkan Proyek $ mkdir cawang $ cd cawang $ go mod init github.</description></item></channel></rss>
+Memperpersiapkan Proyek $ mkdir cawang $ cd cawang $ go mod init github.</description>
+    </item>
+    
+  </channel>
+</rss>

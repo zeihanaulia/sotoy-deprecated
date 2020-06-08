@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>natsio on Sotoy</title>
+    <link>https://sotoy.github.io/tags/natsio.html</link>
+    <description>Recent content in natsio on Sotoy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 30 Apr 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://sotoy.github.io/tags/natsio/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ngulik NATS io</title>
+      <link>https://sotoy.github.io/posts/natsio/ngulik-natsio.html</link>
+      <pubDate>Thu, 30 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://sotoy.github.io/posts/natsio/ngulik-natsio.html</guid>
+      <description>Di dunia software engineering jargon microservice terdengar keren. Dilingkaran software engineer gw, mereka berlomba lomba untuk mengimplementasi microservice dengan harapan service yang dibuatnya menjadi lebih &amp;ldquo;scalable&amp;rdquo; kaya engineer engineer di silicon valley gitu gitu lah. Salah satu topik yang seru untuk dibahas adalah messaging system dan merek yang tengah bersinar itu salah satunya nats.io.
+Kalau mau tau ceritanya tentang nats itu apa, bisa baca di dokumentasinya https://docs.nats.io/. Dibagian introduction sudah dijelaskan secara jelas.</description>
+    </item>
+    
+  </channel>
+</rss>

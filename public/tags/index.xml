@@ -1,1 +1,87 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tags on Sotoy</title><link>https://sotoy.github.io/tags.html</link><description>Recent content in Tags on Sotoy</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 12 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sotoy.github.io/tags/index.xml" rel="self" type="application/rss+xml"/><item><title>docker</title><link>https://sotoy.github.io/tags/docker.html</link><pubDate>Sun, 12 Apr 2020 00:00:00 +0000</pubDate><guid>https://sotoy.github.io/tags/docker.html</guid><description/></item><item><title>rust</title><link>https://sotoy.github.io/tags/rust.html</link><pubDate>Sun, 05 Apr 2020 00:00:00 +0000</pubDate><guid>https://sotoy.github.io/tags/rust.html</guid><description/></item><item><title>go</title><link>https://sotoy.github.io/tags/go.html</link><pubDate>Mon, 30 Mar 2020 00:00:00 +0000</pubDate><guid>https://sotoy.github.io/tags/go.html</guid><description/></item><item><title>golang</title><link>https://sotoy.github.io/tags/golang.html</link><pubDate>Mon, 30 Mar 2020 00:00:00 +0000</pubDate><guid>https://sotoy.github.io/tags/golang.html</guid><description/></item><item><title>postgre</title><link>https://sotoy.github.io/tags/postgre.html</link><pubDate>Mon, 30 Mar 2020 00:00:00 +0000</pubDate><guid>https://sotoy.github.io/tags/postgre.html</guid><description/></item><item><title>graphql</title><link>https://sotoy.github.io/tags/graphql.html</link><pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate><guid>https://sotoy.github.io/tags/graphql.html</guid><description/></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Sotoy</title>
+    <link>https://sotoy.github.io/tags.html</link>
+    <description>Recent content in Tags on Sotoy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 20 May 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://sotoy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>go</title>
+      <link>https://sotoy.github.io/tags/go.html</link>
+      <pubDate>Wed, 20 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://sotoy.github.io/tags/go.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>golang</title>
+      <link>https://sotoy.github.io/tags/golang.html</link>
+      <pubDate>Wed, 20 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://sotoy.github.io/tags/golang.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>knative</title>
+      <link>https://sotoy.github.io/tags/knative.html</link>
+      <pubDate>Sun, 10 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://sotoy.github.io/tags/knative.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rust</title>
+      <link>https://sotoy.github.io/tags/rust.html</link>
+      <pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://sotoy.github.io/tags/rust.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>natsio</title>
+      <link>https://sotoy.github.io/tags/natsio.html</link>
+      <pubDate>Thu, 30 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://sotoy.github.io/tags/natsio.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>https://sotoy.github.io/tags/docker.html</link>
+      <pubDate>Sun, 12 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://sotoy.github.io/tags/docker.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>postgre</title>
+      <link>https://sotoy.github.io/tags/postgre.html</link>
+      <pubDate>Mon, 30 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://sotoy.github.io/tags/postgre.html</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>graphql</title>
+      <link>https://sotoy.github.io/tags/graphql.html</link>
+      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://sotoy.github.io/tags/graphql.html</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

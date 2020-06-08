@@ -6,7 +6,7 @@ categories = [
 tags = [
     "rust",
 ]
-date = "2020-04-05"
+date = "2020-05-06"
 +++
 
 Ada masalah ketika mencoba menggunakan library. Jadi ketika run syntax `cargo run` dapat hasil seperti ini
@@ -36,3 +36,5 @@ Dari sana dapet solusi untuk menambah config cargo `~/.cargo/config`.
 [net]
 git-fetch-with-cli = true
 ```
+
+Selesai.

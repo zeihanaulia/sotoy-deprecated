@@ -1,3 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tutorial on Sotoy</title><link>https://sotoy.github.io/categories/tutorial.html</link><description>Recent content in tutorial on Sotoy</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Mon, 02 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sotoy.github.io/categories/tutorial/index.xml" rel="self" type="application/rss+xml"/><item><title>Membuat Aplikasi Pencatatan Keuangan dengan Golang dan GraphQL</title><link>https://sotoy.github.io/posts/graphql/graphql-multiple-result-for-error-handling.html</link><pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate><guid>https://sotoy.github.io/posts/graphql/graphql-multiple-result-for-error-handling.html</guid><description>GraphQL di tahun 2020 sudah menjadi normal baru didunia pengembangan perangkat lunak. Alat-alat atau pustaka untuk membangun GraphQL server sudah banyak sekali ada dibermacam-macam bahasa pemrogaman juga. Di tutorial kali ini, saya akan coba untuk membangun aplikasi menggunakan GraphQL sebagai penyedia datanya. Aplikasi yang akan dibangun adalah aplikasi pencatatan keuangan pribadi.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tutorial on Sotoy</title>
+    <link>https://sotoy.github.io/categories/tutorial.html</link>
+    <description>Recent content in tutorial on Sotoy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 02 Mar 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://sotoy.github.io/categories/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Membuat Aplikasi Pencatatan Keuangan dengan Golang dan GraphQL</title>
+      <link>https://sotoy.github.io/posts/graphql/graphql-multiple-result-for-error-handling.html</link>
+      <pubDate>Mon, 02 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://sotoy.github.io/posts/graphql/graphql-multiple-result-for-error-handling.html</guid>
+      <description>GraphQL di tahun 2020 sudah menjadi normal baru didunia pengembangan perangkat lunak. Alat-alat atau pustaka untuk membangun GraphQL server sudah banyak sekali ada dibermacam-macam bahasa pemrogaman juga. Di tutorial kali ini, saya akan coba untuk membangun aplikasi menggunakan GraphQL sebagai penyedia datanya. Aplikasi yang akan dibangun adalah aplikasi pencatatan keuangan pribadi.
 Gqlgen Gqlgen adalah salah satu pustaka yang dapat membantu kita membangun GraphQL Server.
-Memperpersiapkan Proyek $ mkdir cawang $ cd cawang $ go mod init github.</description></item></channel></rss>
+Memperpersiapkan Proyek $ mkdir cawang $ cd cawang $ go mod init github.</description>
+    </item>
+    
+  </channel>
+</rss>
