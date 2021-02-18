@@ -9,10 +9,12 @@ tags = [
 date = "2020-04-30"
 +++
 
-Di dunia software engineering jargon microservice terdengar keren. Dilingkaran software engineer gw, mereka berlomba lomba untuk mengimplementasi microservice dengan harapan service yang dibuatnya menjadi lebih "scalable" kaya engineer engineer di silicon valley gitu gitu lah.
+Di dunia software engineering jargon microservice terdengar keren. 
+Dilingkaran software engineer gw, mereka berlomba lomba untuk mengimplementasi microservice dengan harapan service yang dibuatnya menjadi lebih "scalable" kaya engineer engineer di silicon valley gitu gitu lah.
 Salah satu topik yang seru untuk dibahas adalah messaging system dan merek yang tengah bersinar itu salah satunya [nats.io](https://nats.io/).
 
-Kalau mau tau ceritanya tentang nats itu apa, bisa baca di dokumentasinya [https://docs.nats.io/](https://docs.nats.io/). Dibagian introduction sudah dijelaskan secara jelas. Masalah apa saja yang dapat diselesaikan oleh nats.
+Kalau mau tau ceritanya tentang nats itu apa, bisa baca di dokumentasinya [https://docs.nats.io/](https://docs.nats.io/). 
+Dibagian introduction sudah dijelaskan secara jelas. Masalah apa saja yang dapat diselesaikan oleh nats.
 
 > Btw, Emang kenapa sih harus pake messaging system? Emang kalo REST API biasa kenapa? gak boleh kah?
 
@@ -24,6 +26,20 @@ Untuk menyelesaikan masalah itu maka ditemukanlah messaging system yang keuntung
 2. Nonblocking, Messaging system juga bisa melakukan tugas asycronous yang mana system bisa melakukan proses dari banyak request tanpa menunggu response.
 3. Sederhana untuk discale. 
 4. Lebih tahan dan error handling yang lebih baik.
+
+## Perbedaan Nats Server dengan Nats Streaming Server
+
+Perbedaan mendasar dari Nats Server dengan Nats Streaming adalah Nats Server hanya melakukan `fire and forget` alias tidak menyimpan pesan.
+Jika subsciber mati maka tidak akan dapat pesannya kembali.
+Sebaliknya Nats Server menyimpan pesan, sehingga ketika subscriber reconnecting maka secara otomatis akan menerima kembali pesannya.
+
+### Nats Streaming
+
+#### Subscribe vs QueueSubscribe
+
+QueueSubscribe bisa menerima multiple subscribtion dengan channel dan queue name yang sama.
+
+Gunanya, Jika kita ingin
 
 ## Menginstal Nats
 
@@ -164,7 +180,7 @@ Coba kita jalankan. Pertama jalankan program subsriber lalu program publisher. S
 
 Raealitanya akan ada kemungkinan NATS server mati. Jika publisher yang mengakses tidak akan menjadi masalah, karena pasti akan dapat error. Akan tetapi apa yang akan terjadi pada subsriber?. Coba saja matikan servernya, lalu nyalakan kembali dan jalankan program publisher. Apa yang terjadi, Bahaya sekali bukan? Message yang dipublish tidak ada yang bisa diambil oleh subscriber. Kita akan banyak kehilangan data. Tapi tenang, NATS sudah ada solusinya.
 
-#### Menambahkan options reconnectiing
+#### Menambahkan options reconnecting pada nats core
 
 ```go
 package main
@@ -250,6 +266,10 @@ opts = append(opts, nats.ClosedHandler(func(nc *nats.Conn) {
 `ClosedHandler(cb ConnHandler)` ketika sudah mencapai maksimum usaha reconnecting sebaiknya diclose bisa si asumsikan server mati selamanya. diperlukan manusia untuk menyalakan.
 
 Sampai disini, kita sudah bisa bikin pub/sub menggunakan nats, dan ketika server mati sementara NATS akan mengulang reconnecting beberapa kali.
+
+#### Menambahkan reconnecting pada nats streaming
+
+
 
 Referensi:
 
