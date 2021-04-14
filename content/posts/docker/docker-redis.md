@@ -8,6 +8,7 @@ tags = [
     "redis",
 ]
 date = "2020-06-09"
+draft = true
 +++
 
 ## Referensi

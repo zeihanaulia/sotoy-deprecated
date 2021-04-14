@@ -10,7 +10,7 @@ tags = [
     "full-text search",
 ]
 date = "2020-06-16"
-draft = false
+draft = true
 +++
 
 Bagaimana sih cara kita melakukan pencarian text dari data yang kita miliki? 

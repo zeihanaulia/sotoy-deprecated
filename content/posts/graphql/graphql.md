@@ -7,6 +7,7 @@ tags = [
     "graphql",
 ]
 date = "2020-09-28"
+draft = true
 +++
 
 GraphQL sudah menjadi populer dalam pembuatan API saat ini.
