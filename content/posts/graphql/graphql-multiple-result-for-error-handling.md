@@ -8,7 +8,8 @@ tags = [
     "golang",
     "graphql",
 ]
-date = "2020-03-02"
+date  = "2020-03-02"
+draft = true
 +++
 
 GraphQL di tahun 2020 sudah menjadi normal baru didunia pengembangan perangkat lunak.
