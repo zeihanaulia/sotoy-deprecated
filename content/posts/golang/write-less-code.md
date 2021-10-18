@@ -319,3 +319,4 @@ Kita akan coba membuat generator sendiri, meniru dari stringer. dengan nama simp
 ## Inspire everyone to join the golang-tools community of tool builders!
 
 - [Go Tooling WIKI](https://github.com/golang/go/wiki/golang-tools)
+- [Join Gophers Slack](https://invite.slack.golangbridge.org/)
