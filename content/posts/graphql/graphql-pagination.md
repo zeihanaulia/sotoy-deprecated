@@ -7,9 +7,10 @@ tags = [
     "graphql",
 ]
 date = "2020-03-02"
+draft = true
 +++
 
-Implementasi pagination atau bahasa indonesianya pemberian halaman pada data cukup berbeda.
+.
 Biasanya cuma bikin `?page=1&limit=10` dimana pada query databasenya menjadi `OFFSET 0 LIMIT 1`.
 Pada GraphQL ada beberapa cara untuk melakukan pagination.
 
