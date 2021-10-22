@@ -120,12 +120,12 @@ Dari kisah ini kita belajar, untuk menjawab pertanyaan ini:
 
 Software yang baru dirilis seperti anak fresh graduate. Penuh semangat dan optimis yang tiba-tiba harus menghadapi kenyataan pahit diluar sana karena Banyak hal-hal yang tidak pernah diajarkan di kampusnya.
 
-Software yang baru rilis haruslah sinis, selalu berekspektasi jika hal-hal buruk terjadi dan tidak terkejut ketika itu terjadi.
+Software yang baru rilis haruslah sinis, selalu berekspektasi jika hal-hal buruk akan terjadi dan tidak terkejut ketika itu benar-benar terjadi.
 Selalu tidak percaya sehingga selalu belajar dan melindungi dirinya dari kegagalan.
 
-Seperti halnya yang bisa dipelari dari kasus sebelumnya, terlalu percaya diri dengan sistem baru dengan teknologi baru dan arsitektur yang canggih hingga akhirnya sistem mati selama hampir tiga jam hanya karena bugs yang kecil seperti itu.
+Seperti yang bisa kita dipelari dari kasus sebelumnya, terlalu percaya diri dengan sistem baru dengan teknologi baru dan arsitektur yang canggih hingga akhirnya sistem mati selama hampir tiga jam hanya karena bugs yang kecil seperti itu.
 
-Stabilitas yang baik tidak selalu membutuhkan biaya yang banyak. Ketika membangun arsitektur, desain dan bahkan low level implementasi banyak keputusan yang punya high leverage atas stabilitas utama dari sistem.
+Stabilitas yang baik tidak selalu membutuhkan biaya yang banyak. Ketika membangun arsitektur, desain dan bahkan implementasi low level, banyak keputusan yang punya high leverage atas stabilitas utama dari sistem.
 
 Dan menariknya adalah desain yang sangat stabil biasanya memiliki biaya yang sama seperti mengimplemen desain yang tidak stabil.
 
@@ -143,7 +143,7 @@ Sistem yang kuat akan terus memperoses transaksi itu, bahkan ketika ada "kejutan
 
 #### Extending Your Life Span
 
-Bahaya utama dari umur panjang sistem adalah memory leak dan data growth.Mereka akan mematikan sistem lo di production.
+Bahaya utama dari umur panjang sistem adalah memory leak dan data growth. Mereka akan mematikan sistem lo di production.
 Dan mereka jarang ketauan pada saat testing oleh QA.
 
 Disini penulis bertanya, jadi bagaimana cara lo menemukan bugs yang kaya gini? Dia bilang satu satunya cara ya tangkap bugs itu sebelum ada diproduction dan jalankan longevity test. 
@@ -151,25 +151,28 @@ Longevity test yang dimaksud adalah load test, yang dijalankan secara terus mene
 
 #### Failure Modes
 
-Apapun yang terjadi, sistem lo harus punya beberapa variasi failure modes. Kalau lo mengabaikannya akan mengakibatkan lo gak punya kontrol dari sistem yang lo buat. Setelah lo menerima kegagalan yang mungkin akan terjadi. Lo akan punya kemampuan untuk merancang reaksi dari kegagalan itu.
+Apapun yang terjadi, sistem lo harus punya beberapa variasi failure modes. Kalau lo mengabaikannya akan mengakibatkan, lo gak punya kontrol dari sistem yang lo buat. 
+
+Tapi kalau sudah mengekspektasikan failure modes sebelumnya, ketika lo menerima kegagalan yang mungkin akan terjadi. Lo akan punya kemampuan untuk merancang reaksi dari kegagalan itu.
 
 Mengambil istilah dari James R. Chiles pada bukunya Inviting Disaster yaitu "crackstoppers". Seperti membangun zona yang akan menyerap benturan dan menjaga pengguna tetap aman.
 
 Kalo lo gak mendesain failure mode. Lo gak bisa memperdiksi kejadian berbahaya dan memperbaikinya dengan cepat.
 #### Stoping Crack Propagation
 
-Belajar dari Core Facilities project yang tidak merencanakan mode kegagalan. Crack bermula dari kecerobohan menangani `SQLException`, padahal itu bisa saja dihentikan diawal atau dicarikan alternatifnya. Coba kita lihat.
+Belajar dari Core Facilities project yang tidak merencanakan mode kegagalan atau failure mode. Crack bermula dari kecerobohan menangani `SQLException`, padahal itu bisa saja dihentikan diawal atau dicarikan alternatifnya.
 
 Pencegahan bisa dimulai dari low-level detail sampai ke high-level architechture.
 
 Low level misalnya membuat kode yang lebih proper agar bisa menangkap error.
+
 High-Level misalnya membuat request/reply messages queue. Sehingga caller bisa tau kalo balasannya tidak pernah diterima. 
 
-Intinya banyak cara atau pendekatan untuk mengentikan kegagalan si `SQLException` menyebar ke seluruh airlines. Sayangnya, para desainer tidak mempertimbangkan kemungkinan "crack" ketika membuat service yang digunakan bersama.
+Intinya banyak cara atau pendekatan untuk menghentikan kegagalan si `SQLException` menyebar ke seluruh sistem airlines. Sayangnya, para desainer tidak mempertimbangkan kemungkinan "crack" ketika membuat service yang digunakan bersama.
 
 #### Chain of Failure
 
-Disetiap sistem outage adalah kejadian berantai. Satu issue muncul akan berimpact ke yang lainnya dan menyebabkan issue ke yang lainnya lagi. Kegagalan gak bisa dihindari tapi kita bisa memprediksi kemungkinan kemungkinan.
+Disetiap sistem outage adalah kejadian berantai. Satu issue muncul akan berimpact ke yang lainnya dan menyebabkan issue ke yang lainnya lagi. Kegagalan gak bisa dihindari tapi kita bisa memprediksi kemungkinan kemungkinan yang akan terjadi.
 
 Terminologi umum yang bisa kita gunakan:
 
@@ -179,7 +182,7 @@ Terminologi umum yang bisa kita gunakan:
 
 - Error
     
-    Perlikau yang terlihat tidak benar. Misal pas lagi trading tiba tiba membeli 10 miliar dolar, ini adalah error.
+    Perilaku yang terlihat tidak benar. Misal pas lagi trading tiba-tiba membeli saham senilai 10 miliar dolar, ini adalah error.
 
 - Failure / Kegagalan
 
@@ -187,7 +190,7 @@ Terminologi umum yang bisa kita gunakan:
 
 Faults membuka crack, faults menjadi error dan error akan memprovokasi kegagalan. 
 
-Salah satu cara untuk mempersiapkan setiap kemungkinan dari kegagalan adalah melihat setiap external call,setiao I/O, setiap penggunaan resources dan setiap ekspektasi outcome dan ask. Coba lo pikirin beberapa pertanyaan seperti ini:
+Salah satu cara untuk mempersiapkan setiap kemungkinan dari kegagalan adalah melihat setiap external call, setiap I/O, setiap penggunaan resources dan setiap ekspektasi outcome dan ask. Coba lo pikirin beberapa pertanyaan seperti ini:
 
 - Bagaimana kalo gak bisa membuat inisiasi koneksi?
 - Bagaimana jika membuat koneksi tapi membutuhkan waktu lama?
@@ -200,21 +203,32 @@ Salah satu cara untuk mempersiapkan setiap kemungkinan dari kegagalan adalah mel
 Itu hanya awalan dari semuanya yang bisa berjalan salah. 
 Ada beberapa pendapat tentang bagaimana cara menangani faults. 
 
-Pendapat pertama kira butuh membuat sistem fault-tolerant. Kita harus tangkap semua excepetions, cek error code, dan membuat faults menjadi error.
+Pendapat pertama, kita butuh membuat sistem fault-tolerant. Kita harus tangkap semua excepetions, cek error code, dan membuat faults menjadi error.
 
-Pendapat kedua sebaliknya, percuma membuat fault-tolerance. Itu seperti mencoba membuat device anti bodoh, alam semesta akan selalu memberikan orang bodoh yang lebih baik. Gak peduli gimana cara lo buat menangkap keslahan dan memperbaikinya sesuatu yang tidak diekspektasikan akan selalu terjadi. Artinya ya biarin aja crash tinggal restart.
+Pendapat kedua sebaliknya, percuma membuat fault-tolerance. Itu seperti mencoba membuat device anti bodoh, alam semesta akan selalu memberikan orang bodoh yang lebih baik. Gak peduli gimana cara lo buat menangkap kesalahan dan memperbaikinya. Sesuatu yang tidak diekspektasikan akan selalu terjadi. Artinya ya biarin aja crash tinggal restart.
 
-Tapi keduanya sepakat. Fault akan terjadi, mereka tidak pernah bisa secara sempurna mencegahnya. Dan kita harus terus menjaga faults agar tidak menjadi error. Lo harus memutuskan buat sistem lo, lebih baik gagal atau error. meskipun lo mencoa buat mencegah kegagalan dan error.
-
+Tapi sebenarnya keduanya sepakat, Kalau Faults akan terjadi, mereka tidak pernah bisa secara sempurna mencegahnya. Dan kita harus terus menjaga faults agar tidak menjadi error. Lo harus memutuskan buat sistem lo, lebih baik gagal atau error. meskipun lo mencoba buat mencegah kegagalan dan error.
 
 #### Wrapping Up
 
-Kegagalan di production itu unik. Kejadiannya bisa berbeda beda. Yang bisa kita lakukan belajar dari kesalahan. Mengenal stability antipattern dan belajar dari patern dari kegagalan ini. 
+Kegagalan di production itu unik. Kejadiannya bisa berbeda-beda. Yang bisa kita lakukan belajar dari kesalahan. Mengenal stability antipattern dan belajar pola dari kegagalan ini. 
 
-Selain itu kita juga perlu pelajar stability pattern. belajar dengan desain dan arsitektur pattern untuk mengalahkan antipattern. Patern in gak bisa mencegajh crack pada sistem. gak ada yang bisa. dibeberapa kondisi akan selalu mentriger crack. tapi patern ini akan mencegah crack menyebar. 
+Selain itu kita juga perlu pelajar stability pattern. belajar dengan desain dan arsitektur pattern untuk mengalahkan antipattern. Patern ini gak bisa mencegah crack pada sistem. Dibeberapa kondisi akan selalu mentriger crack. tapi dengan belajar stability pattern akan mencegah crack menyebar. 
 
 ### 4. Stability Antipatterns
 
+#### Integration Points
+#### Chain Reactions
+#### Cascading Failures
+#### Users
+#### Self-Denial Attacks
+#### Scaling Effects
+#### Unbalanced Capacities
+#### Dogpile
+#### Force Multiplier
+#### Slow Responses
+#### Unbounded Result Sets
+#### Wrapping up
 ### 5. Stability Patterns
 
 ## Part 2. Design For Production
