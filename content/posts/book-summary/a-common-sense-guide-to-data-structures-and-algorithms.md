@@ -16,7 +16,10 @@ draft = true
 
 ## 1. Why [[Data Structures]] Matter
 
-Sebagai software enginner yang berpengalaman, mereka akan mulai belajar tentang lapisan dan nuansa tabahan terkait kualitas kode mereka. Ada banyak cara untuk mengukur kualitas kode. Yang paling penting adalah maintainability. Lalu selanjutnya adalah efisiensi code atau kode berjalan dengan lebih cepat.
+Sebagai software enginner yang berpengalaman, mereka akan mulai belajar tentang lapisan dan nuansa tambahan terkait kualitas kode mereka. 
+Ada banyak cara untuk mengukur kualitas kode. 
+Yang paling penting adalah maintainability. 
+Lalu selanjutnya adalah efisiensi code atau kode berjalan dengan lebih cepat.
 
 Bandingkan kedua code berikut ini, mana yang lebih cepat. Kode ini memiliki hasil yang sama yaitu mencetak bilangan genap.
 
