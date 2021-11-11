@@ -124,7 +124,7 @@ Perasaan ini akan membuat lo terus berkerja hingga akhirnya pekerjaan itu selesa
 
 ### Take action
 
-- Segera terapkan teknik "salami slice" dan "switch slice" untuk memulai pekerjaan besar dan kompleks.
+- Segera terapkan teknik "salami slice" dan "swiss cheese" untuk memulai pekerjaan besar dan kompleks.
 - Become action oriented. Jangan menunda nunda, coba sekarang.
 
 ## 19 Create Large Chunks of Time
