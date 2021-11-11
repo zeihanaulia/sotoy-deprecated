@@ -17,19 +17,50 @@ Buku ini membahas 21 cara menjadi lebih produktif dengan membuat skala prioritas
 Buku ini ditulis oleh Biran Tracy dia adalah seorang public speaker, penulis buku, motivator dan CEO.
 
 Kenapa nama bukunya adalah eat that frog atau makan kodok itu. 
-Jadi eat that frog itu diambil dari quote mark twain. 
+Jadi eat that frog itu adalah metode yang dikemukakan oleh mark twain. 
 
 > “Eat a live frog first thing in the morning and nothing worse will happen to you the rest of the day.”
 
-Jika hal yang pertama kali kamu lakukan setiap pagi adalah makan kodok hidup , maka kamu pasti akan menjalani menjalani hidup dengan bahagia, karena kamu sudah melewati sesuatu yang mungkin hal terburuk sepanjang hari.
+Jika hal yang pertama kali kamu lakukan disetiap pagi adalah makan kodok hidup , 
+maka kamu pasti akan menjalani hidup dengan bahagia, 
+karena kamu sudah melewati sesuatu yang mungkin hal terburuk sepanjang hari.
 
 Jadi brian beranggapan, kita harus memulai dengan pekerjaan paling penting, Karena biasanya pekerjaan ini yang sering kita tunda, malah mengerjakan hal yang kurang penting.
 
 ## 1 Set the Table
+
+### Take action
+
+- Ambil kertas kosong sekarang juga dan buatlan 10 daftar tujuan yang ingin dicapai.
+- Review 10 daftar tersebut, dan jika lo bisa capai, itu akan menjadi positif impact buat lo.
+
 ## 2 Plan Every Day in Advance
+
+### Take action
+
+- Mulailah hari ini untuk merencanakan setiap hari, setiap minggu dan bulan sebelumnya.
+- Susun semua tujuan dan urutkan berdasarkan prioritas.
+
 ## 3 Apply the 80/20 Rule to Everything
+
+### Take action
+
+- Buatlah daftar semua tujuan utama, kegiatan sehari hari, project yang sedang dikerjakan. Dan manakah yang bisa masuk dalam 20% atau 80%.
+- Putuskan hari ini, bahwa lo akan mengerjakan hal hal yang sangat berimpact buat hidup lo, dan membuat lo menjadi versi yang lebih baik lagi.
+
 ## 4 Consider the Consequences
+
+### Take action
+
+- Review daftar tugas lo, Tanya terus kepada diri sendiri, tugas apa yang kalo lo lakukan dengan baik, bakal berdampak bagus buat hidup lo.
+- Tentukan hal hal terpenting yang bisa lo lakukan dan disiplinkan diri lo buat melakukannya secara terus menerus.
+
 ## 5 Practice Creative Procrastination
+
+### Take action
+
+- Latih "Zero-based thinking" disetiap kehidupan lo
+- Periksa setiap aktivitas lo dan evaluasi berdasarkan situasi lo saat ini
 ## 6 Use the ABCDE Method Continually
 
 Ini merupakan daftar pekerjaan yang harus lo lakukan setiap hari.
@@ -70,7 +101,6 @@ Gunakan waktu yang ada buat upgrade skill lo.
 - Membangun rencana pribadi untuk mempersiapkan diri lo melakukan hal yang terpenting dengan sangat baik.
 
 ## 12 Identify Your Key Constraints
-
 ## 13 Put the Pressure on Yourself
 ## 14 Motivate Yourself into Action
 ## 15 Technology Is a Terrible Master
