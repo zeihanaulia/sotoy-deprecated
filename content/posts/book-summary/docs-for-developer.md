@@ -7,7 +7,7 @@ tags = [
     "books",
     "programming",
     "documentation",
-    "Jared Bhatti, 
+    "Jared Bhatti", 
     "Zachary Sarah Corleissen", 
     "Jen Lambourne", 
     "David Nunez",
