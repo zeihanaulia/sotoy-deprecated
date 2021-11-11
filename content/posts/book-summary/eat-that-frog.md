@@ -10,7 +10,7 @@ tags = [
     "Brian Tracy",
 ]
 date = "2021-11-11"
-draft = true
+draft = false
 +++
 
 Buku ini membahas 21 cara menjadi lebih produktif dengan membuat skala prioritas. 
