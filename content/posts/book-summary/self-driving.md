@@ -364,3 +364,39 @@ Pandanglah dengan segala potensinya dengan cara-carabaru.
 ## 11: Critical Thinking
 ## 12: Growth Mindset
 ## 13: Epilog
+
+Pembentukan mental dan karakter semasa muda itu sangat menentukan.
+Pembentukan mental itu mencangkup ketrampilan-keterampilan hidup dasar yang membentuk fondasi kepemimpinan seseorang,
+sekaligus fondasi ekonomi satu bangsa.
+Mentalitas passenger pada dasarnya terbentuk karena kurang terlatihnya lif skills seseorang sehingga individu itummenjadi tidak cekatan dan terbelenggy.
+Executive function dan self regulationnya tidak jalan. 
+Terdapat indikasi kuat anak-anak muda sangat tidakfokus dalam berkerja.
+Pikirannya bercabang-cabang, lambat laun mereka akan sangat mengandalkan corporate branding sehingga inisiatif mereka untuk mendatangi dan melaynikurang kuat.
+Umumnya punya ilmu, tetapi maaf "malas" menggunakan ilmu-ilmu yang mereka miliki untuk berpikir, menalisis, mencari penyebab dan memecahkan masalah-masalah yang dihadapi.
+
+Kalau tidak kita bentuk, maka mereka akan lebih banyak mengeluh karena semakin hari semakin terlihat tidak berkarya, lalu terancam berbagai sanksi.
+Mulailah mereka merasa diperlakukan kurang adil karena gaji teman-temannya yang lebih muda naik lebih cepat, posisi para driver melonjak tinggi sementara mereka tetap dibawah.
+Menjadi compainer dan terlihat kumuh, kurang mampu membeli kesejahteraan dan kebahagiaan.
+
+Setiap passenger bisa memlih, menjadi bad atau good atau sekalian menjadi bad driver.
+Dan perusahaan ayau institusi pun punya piliham"
+memasukan mereka ke dalam lemari es atau melakukan transformasi.
+
+Kaum muda perlu dilatih tiga hal:
+
+- working memory (kemampuan menata informasi)
+- inhibitory control (tahu dan tidak melakukan apa yang tidak boleh diucapkan /dilakukan) /pengendalian diri
+- cognitive flexiibility (kemampuan beradaptasi)
+
+Ketiga hal itulah yang akan membentuk generasi emas yang bertanggung jawab dan produktif.
+Mereka sedari dini perlu dibentuk untuk berkerja secara efektif, fokus, tahu dan berkerja dengan aturan, sikap positif terhadap oranglain, mengatasi ketidaknyamanan dan permintaan yang beragam, serta cara mengelola infirmasi yang datang bertubi tubi.
+
+Memberikan tantangan pada kamumuda atau pegawai  itu penting. Bahkan, lebih pending dari sekadar pujian.
+Tantangan yang dibasakan akan melatih working memory, fokus, dan cognitive flexibilitu seseorang. 
+Dan ini sangat menentukan kualias seseorang untuk menjadi driver atau passenger.
+
+Hidup yang indah adalah hidup yang bermanfaat, bermatabat dan tumbuh.
+
+> Jika anda ingin menaklukan rasa takut, jangan berpangku tangan didalam rumah dan diam didepannya.
+> Pergilah keluar, temui banyak orang dan buatlah diri anda sibuk.
+> - Dale carnegie
