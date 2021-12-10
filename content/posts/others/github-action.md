@@ -248,4 +248,13 @@ Lo bisa belajar tentang keys yang bisa lo masukin kedalam workflow file lo denga
 ### Membuat workflow file dari awal
 
 Langsung saja kita coba GitHub Action. Disini gw udah ada sample code menggunakan golang.
+Goalsnya adalah membuat CI/CD dengan GitHub Action yang stagenya dibagi menjadi seperti berikut ini:
 
+- test
+  - running unit testing and check coverage
+- build
+  - build images
+  - push to docker hub
+- deploy
+
+Terima Kasih.
