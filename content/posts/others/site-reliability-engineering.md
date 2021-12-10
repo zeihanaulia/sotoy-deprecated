@@ -46,3 +46,52 @@ melainkan teman dekat, yang dirancang untuk membantu meruntuhkan hambatan organi
 ## Bagaimana cara mengukur reability
 ## Seharusnya service seberapa reliable
 ## Kapan kita perlu membuat service menjadi lebih reliable. Error Budged
+
+## Cara mengukur SLIs
+
+Ada lima cara mengukur SLI untuk mengukur kebahagiaan users.
+
+1. Request logs
+2. Application metrics
+3. Front-end infra metrics
+4. Synthetic clients
+5. Client-side instrumentation
+
+### Request Logs
+
+Ini adalah salah satu cara untuk melacak relability user yang kompleks dengan banyak interaksi dengan menggunakan request log.
+
+Keuntungan:
+
+Kalau kita mau membuat metric dengan logic, kita bisa upayakan untuk membuatnya.
+
+Kekurangan:
+
+Biasanya ada latency yang signifikan pada saat pengambilan data, sehingga tidak cocok untuk keadaan darurart.
+Requestyang tidak masuk ke server tidak bisa diamati sama sekali
+
+### Application metrics
+
+Keuntungan:
+
+Mudah ditambahkan dan lantensi lebih cepat dari request logs
+
+Kekurangan:
+
+Tidak bisa mengukur perjalanan penguna multi request yang kompleks
+
+### Front-end infra metrics
+
+Keuntungan:
+
+Data bisa didapatkan dari sisi frontend dengan memanfaatkan fitur cloud provider atau event tracking vendor
+
+Kekurangan:
+
+Jika memanfaatkan misalkan saja load balancer, load balancer itu tidak statefull sehingga data bisa hilang.
+Atau jika mengguakan event tracking vendor ada kemungkinan service mereka down dan kita kehilangan data.
+
+### Synthetic clients
+
+
+### Client-side instrumentation
