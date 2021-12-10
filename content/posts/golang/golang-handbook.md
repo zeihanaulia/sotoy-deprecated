@@ -11,7 +11,9 @@ date = "2021-12-07"
 draft = false
 +++
 
-## Menulis HTTP Server
+## Golang Handbook
+
+### Membuat HTTP Server
 
 Ada banyak cara dalam membuat HTTP Server pada golang.
 Kita bisa menggunakan standard libary golang `net/http` atau selain itu. seperti:
@@ -21,7 +23,7 @@ Kita bisa menggunakan standard libary golang `net/http` atau selain itu. seperti
 - gin
 - dll
 
-### Standard Library
+#### Standard Library
 
 ```go
 package main
@@ -95,7 +97,7 @@ func main() {
 }
 ```
 
-## Build golang menggunakan Docker
+### Build golang menggunakan Docker
 
 ```Dockerfile
 FROM golang:1.17 as build
@@ -149,7 +151,7 @@ CMD ["/main"]
 	runing command `/main`
 
 
-## Setup golangci-lint
+### Setup golangci-lint
 
 Linter sangat membantu untuk melakukan standarisasi code.
 Mereka juga bisa mengecek jika ada kode yang tidak efektif atau bugs kecil.
