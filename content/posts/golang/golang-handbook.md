@@ -13,6 +13,8 @@ draft = false
 
 ## Golang Handbook
 
+Kumpulan snippet yang biasa digunakan dalam project menggunakan golang,
+
 ### Membuat HTTP Server
 
 Ada banyak cara dalam membuat HTTP Server pada golang.
@@ -177,3 +179,6 @@ Cara setupnya cukup mudah
 	```
 
 Informasi lebih lanjut bisa cek di [https://golangci-lint.run/usage/install/](https://golangci-lint.run/usage/install/).
+
+<!-- ###  Observability menggunakan [OpenTelemetry](https://opentelemetry.io/) -->
+
