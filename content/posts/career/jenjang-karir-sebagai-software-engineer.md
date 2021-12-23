@@ -49,7 +49,11 @@ Kita bisa mendapat pemikiran mereka dari sana. Atau baca buku biografi agar bisa
 
 Coba dalami 1 atau 2 bahasa lebih dulu sebelum menciba bahasa baru. Karena ada banyak sekali konsep. Coba solved beberapa problem statement dari satu bahasa. Lalu coba bandingkan dengan bahasa lain, ada gak yang lebih bagus?
 
-## 42:42 hipotesa dari pak sidu, junior akan oversupply karena ada menjamurnya bootcamp, tapivmid/senior kompensasinya akan meningkat secara exponential. Dan perusahaan juga akan mencari orang orang yang pengalamannya relevan dengan yang merrka butuhkan sekarang.
+## 42:42 Hipotesa dari pak [sidu](https://twitter.com/ponnappa) 
+
+{{< tweet user="ponnappa" id="1412687176983212039" >}}
+
+junior akan oversupply karena ada menjamurnya bootcamp, tapivmid/senior kompensasinya akan meningkat secara exponential. Dan perusahaan juga akan mencari orang orang yang pengalamannya relevan dengan yang merrka butuhkan sekarang.
 
 ## 48:30 Jenjang karir ideal
 
@@ -64,7 +68,9 @@ Harus ditanya balik ke diri sendiri, lo lebih berkontribusi apa? Management? Apa
 Misal, manager bisa mengelola project yang kompleks, dan dia bisa mengatasinya hingga menjadi value untuk perusahaan ini diperlukan kemampuan managerial. 
 Atau ada suatu project yang sangat sulit, dan lo bisa mendesign sehingga ketika tim mengikuti design lo akhirnya berhasil, ini kah peran sebagai teknikal.
 
-53:35 Apakah lo udah layak untuk naik kelas dari mata perusahaan? Bagaimana cara mengevaluasi? Bisa lihat disini 
+## 53:35 Cara tau kalo lo udah naik kelas
+
+Apakah lo udah layak untuk naik kelas dari mata perusahaan? Bagaimana cara mengevaluasi? Bisa lihat disini 
 
 https://snowflake.medium.com/#1,2,3,2,4,1,1,4,3,2,0,4,2,2,3,0,Cersei%20Lannister,Staff%20Engineer
 
