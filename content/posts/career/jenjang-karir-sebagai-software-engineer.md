@@ -18,37 +18,47 @@ draft = false
 {{< youtube  mNVfp2vxEIc >}}
 
 
-8:15 Software engineer adalah profesi dimana kita berkembang seiring masalah yang kita pecahkan.
+## 8:15 Definisi Software Engineer
 
-9:25 gimana cara memilih problem statement yang bisa buat diri lo berkembang? Jawaban:
+Software engineer adalah profesi dimana kita berkembang seiring masalah yang kita pecahkan.
+
+## 9:25 Bagaimana cara memilih problem statement yang bisa buat diri lo berkembang? 
+
 Solving problem with the right manner, mengerti konsep koding, design pattern.
 
-13:00 attitude atau sikap dari seorang pemula yang harus dijadikan role model. Dia bisa mengerjakan problem statement itu dengan baik dan mengenalkan ke hal-hal baru.
+## 13:00 Contoh role model yang bagus sebagai pemula
 
-15:00 bagaimana cara memulai dari komunitas agar dilirik oleh karyawan. 
+Attitude atau sikap dari seorang pemula yang harus dijadikan role model. 
+Dia bisa mengerjakan problem statement itu dengan baik dan mengenalkan ke hal-hal baru.
+
+## 15:00 Bagaimana cara memulai dari komunitas agar dilirik oleh perusahaan 
 
 Kontribusi dari komunitas adalah cara terbaik untuk mendapatkan referal dari orang yang diperusahaan tersebut. Caranya, menunjukan karya dikomunitas atau opensource atau aktif dikomunitas menjadi pembicara, banyak peluang bertemu senior senior di perusahaan.
 Fun Fact: banyak sekali teman teman dikomunitas yang sebenarnya sedang mencari tim dikantornya. Jadi kalo lo standing out ada kemungkinan lo bakal dapat tawaran bergabung dengan timnya.
 
-32:00 apakah ada standard yang sempurna, Untuk dijadikan patokan? 
+## 32:00 Qpakah ada standard yang sempurna, Untuk dijadikan patokan? 
 
 Ada banyak principle diluar sana dan gak ada yang salah, tinggal gimana kita bisa apa engga ambil valur dari principle-principle itu. Jangan membatasi, lebih baik pelajari semua dan belajar dari orang orang yang sudah sukses sebelumnya.
 
-34:00 coba follow orang orang yang bisa dijadikan mentor, misalnya pembuat kubernetes, pendiri hashicorp mitchell hasimoto. 
+## 34:00 Dimana bisa mendapatkan mentor
+
+Coba follow orang orang yang bisa dijadikan mentor, misalnya pembuat kubernetes, pendiri hashicorp mitchell hasimoto. 
 Kita bisa mendapat pemikiran mereka dari sana. Atau baca buku biografi agar bisa mempelajari cara berpikir atau pikiran mereka.
 
-35:35 bagaimana kita menjadi T shaped engineer? 
+## 35:35 Bagaimana kita menjadi T shaped engineer? 
 
 Coba dalami 1 atau 2 bahasa lebih dulu sebelum menciba bahasa baru. Karena ada banyak sekali konsep. Coba solved beberapa problem statement dari satu bahasa. Lalu coba bandingkan dengan bahasa lain, ada gak yang lebih bagus?
 
-42:42 hipotesa dari pak sidu, junior akan oversupply karena ada menjamurnya bootcamp, tapivmid/senior kompensasinya akan meningkat secara exponential. Dan perusahaan juga akan mencari orang orang yang pengalamannya relevan dengan yang merrka butuhkan sekarang.
+## 42:42 hipotesa dari pak sidu, junior akan oversupply karena ada menjamurnya bootcamp, tapivmid/senior kompensasinya akan meningkat secara exponential. Dan perusahaan juga akan mencari orang orang yang pengalamannya relevan dengan yang merrka butuhkan sekarang.
 
-48:30 idealnya perusahaan metinya bagaimana? Sudah dijelaskan disini
+## 48:30 Jenjang karir ideal
+
+Sudah dijelaskan disini
 https://medium.com/hyperjump-tech/menanjak-tangga-karir-sebagai-software-engineer-1fe5ca13f555
 
 Tapi umumnya ini bentuk organisasi diluar, diindonesia hanya beberapa yang baru melakukan. Mereka sudah mengidentifikasi 2 keilmuan yang berbeda satu teknis dan mengelola kompleksitas sistem untuk menghasilkan value.
 
-51:20 Apa yang terjadi kalo gw stuck? 
+## 51:20 Apa yang terjadi kalo stuck? 
 
 Harus ditanya balik ke diri sendiri, lo lebih berkontribusi apa? Management? Apa teknikal delivery? 
 Misal, manager bisa mengelola project yang kompleks, dan dia bisa mengatasinya hingga menjadi value untuk perusahaan ini diperlukan kemampuan managerial. 
@@ -60,22 +70,33 @@ https://snowflake.medium.com/#1,2,3,2,4,1,1,4,3,2,0,4,2,2,3,0,Cersei%20Lannister
 
 https://medium.engineering/engineering-growth-at-medium-4935b3234d25
 
-58:48 saran dari gio, lebih baik fokus ke jenjang karir pribadi. Punya target pribadi untuk meningkatkan keahlian. 
+### 58:48 saran dari gio
 
-59:10 saran dari iqbal, gimana caranya setiap personal individu punya portofolio yang baik. Sehingga kalo perusahaan gak notice lo, tapi lo punya kemampuan yang bagus, mungkin perusahaan lain yang bakal notice lo.
+lebih baik fokus ke jenjang karir pribadi. Punya target pribadi untuk meningkatkan keahlian. 
 
-1:00:50 gimana caranya mengembangkan karir lebih cepat atau jadi senior sesegera mungkin, ya jawabannya dengan mengembangkan portofolio.
+### 59:10 saran dari iqbal
 
-1:08:00 interaksi yang baik dengan mentor adalah, jika menteenya sudah punya problem statement.
+gimana caranya setiap personal individu punya portofolio yang baik. Sehingga kalo perusahaan gak notice lo, tapi lo punya kemampuan yang bagus, mungkin perusahaan lain yang bakal notice lo.
 
-01:18:00 seberapa pengaruhnya universitas pada saat apply kerjaan?
+### 1:00:50 gimana caranya mengembangkan karir lebih cepat 
+
+ya jawabannya dengan mengembangkan portofolio.
+
+### 1:08:00 Sikap mentee terhadap mentornya
+
+interaksi yang baik dengan mentor adalah, jika menteenya sudah punya problem statement.
+
+### 01:18:00 seberapa pengaruhnya universitas pada saat apply kerjaan?
+
 Kalo bicara realita, ditempat kerja ada satu round dimana hiring manager kumpul untuk menentukan apakah kandidat tersebut layak atau tidak. Didiskusi itu semua fakta pendukung itu dinilai, fakta pendukung seperti hasil interview, portofolio, kontribusi dikomunitas. Untuk kampus, ada dibeberapa perusahaan yang jadi pertimbangan dan ada juga yang tidak seperti di kantornya gio dan iqbal.
 
-01:20:00 apa yang perlu dipersiapkan untuk menjadi software engineer?
+### 01:20:00 apa yang perlu dipersiapkan untuk menjadi software engineer?
+
 Sudah pasti portofolio harus ada.
 Tapi untuk mendapat tittle senior mereka harus menjadi panutan dalam tim. Mereka memiliki tanggung jawab lebih, mereka harus sudah biasa mentoring, pairing atau mengajarkan teman teman yang junior. Itu yang diekspektasikan sebagai senior engineer. Dan itu tanggung jawab mereka.
 
-01:29:50 Contoh problem statement
+## 01:29:50 Contoh problem statement
+
 Contoh dari iqbal, dia punya problem statement seperti ini, 
 
 "Saya punya program banyak digoacademy tapi kesulitan untuk scale up" 
