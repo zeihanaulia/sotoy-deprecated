@@ -23,7 +23,7 @@ Pastikan selalu ada disetiap code editor yang digunakan.
 #### VSCode
 
 Link: 
-- [https://code.visualstudio.com/docs/languages/go(https://code.visualstudio.com/docs/languages/go)
+- [https://code.visualstudio.com/docs/languages/go](https://code.visualstudio.com/docs/languages/go)
 
 #### Vim
 
