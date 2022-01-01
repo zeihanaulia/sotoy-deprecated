@@ -49,7 +49,7 @@ func (self User) Activated() {}
 func (this User) Activated() {}
 ```
 
-Aktifkan [golangci-lint](https://github.com/golangci/golangci-lint) dengan [revive](https://revive.run/docs) untuk dapat pengecekan (receiver-naming)[https://revive.run/r#receiver-naming].
+Aktifkan [golangci-lint](https://github.com/golangci/golangci-lint) dengan [revive](https://revive.run/docs) untuk dapat pengecekan [receiver-naming](https://revive.run/r#receiver-naming).
 
 ### Memberikan nama package yang sesuai
 
