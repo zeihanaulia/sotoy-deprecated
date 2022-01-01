@@ -11,28 +11,28 @@ date = "2021-12-07"
 draft = false
 +++
 
-## Golang Handbook
+# Golang Handbook
 
 Kumpulan snippet yang biasa digunakan dalam project menggunakan golang,
 
-### Idiomatic
+## Idiomatic
 
-#### Gunakan gofmt
+### Gunakan gofmt
 
 [gofmt](https://pkg.go.dev/cmd/gofmt) adalah program untuk formating digolang.
 Pastikan selalu ada disetiap code editor yang digunakan.
 
-##### VSCode
+#### VSCode
 
 Link: 
 - [https://code.visualstudio.com/docs/languages/go(https://code.visualstudio.com/docs/languages/go)
 
-##### Vim
+#### Vim
 
 Link:
 - [https://github.com/fatih/vim-go/](https://github.com/fatih/vim-go/)
 
-#### Buat nama receiver tetap pendek
+### Buat nama receiver tetap pendek
 
 ```go
 type User struct {
@@ -51,7 +51,7 @@ func (this User) Activated() {}
 
 Aktifkan [golangci-lint](https://github.com/golangci/golangci-lint) dengan [revive](https://revive.run/docs) untuk dapat pengecekan (receiver-naming)[https://revive.run/r#receiver-naming].
 
-#### Memberikan nama package yang sesuai
+### Memberikan nama package yang sesuai
 
 Penamaan package sebaiknya sesuai dengan nama directory atau fungsi dari package tersebut.
 
@@ -67,7 +67,7 @@ package elasticsearch
 package order
 ```
 
-#### Kelompokan import sesuai asalnya
+### Kelompokan import sesuai asalnya
 
 Ada tiga bagian pada setiap import dan urutkan sesuai dengan asalnya, jangan urutkan sesuai abjad. Contoh
 
@@ -84,7 +84,7 @@ import (
 )
 ```
 
-#### Gunakan nama pendek untuk scope yang terbatas
+### Gunakan nama pendek untuk scope yang terbatas
 
 Nama pendek seperti 1 karakter huruf hanya boleh digunakan pada scope terbatas.
 Misalnya seperti pada function for.
@@ -95,7 +95,7 @@ for i:=0; i<5; i++ {}
 
 sisanya berikan nama yang jelas sesuai maknanya.
 
-#### Context harus menjadi parameter pertama
+### Context harus menjadi parameter pertama
 
 Ada aturan pada penggunaan context:
 
@@ -119,7 +119,7 @@ Ada aturan pada penggunaan context:
 	}
 	```
 
-#### Return diawal
+### Return diawal
 
 Dalam setiap function yang mengembalikan nilai seharusnya return diawal.
 
@@ -167,7 +167,7 @@ func ParseValue(value Value) (string, error) {
 #### Comments untuk mesin dan manusia
 #### Hindari fungsi yang tidak perlu
 #### Hindari fungsi init()
-### Membuat HTTP Server
+## Membuat HTTP Server
 
 Ada banyak cara dalam membuat HTTP Server pada golang.
 Kita bisa menggunakan standard libary golang `net/http` atau selain itu. seperti:
@@ -177,7 +177,7 @@ Kita bisa menggunakan standard libary golang `net/http` atau selain itu. seperti
 - gin
 - dll
 
-#### Standard Library
+### Standard Library
 
 ```go
 package main
@@ -251,7 +251,7 @@ func main() {
 }
 ```
 
-### Build golang menggunakan Docker
+## Build golang menggunakan Docker
 
 ```Dockerfile
 FROM golang:1.17 as build
@@ -305,7 +305,7 @@ CMD ["/main"]
 	runing command `/main`
 
 
-### Setup golangci-lint
+## Setup golangci-lint
 
 Linter sangat membantu untuk melakukan standarisasi code.
 Mereka juga bisa mengecek jika ada kode yang tidak efektif atau bugs kecil.
