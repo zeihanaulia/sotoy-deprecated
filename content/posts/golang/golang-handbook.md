@@ -11,8 +11,6 @@ date = "2021-12-07"
 draft = false
 +++
 
-# Golang Handbook
-
 Kumpulan snippet yang biasa digunakan dalam project menggunakan golang,
 
 ## Idiomatic
