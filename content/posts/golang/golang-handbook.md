@@ -332,3 +332,21 @@ Informasi lebih lanjut bisa cek di [https://golangci-lint.run/usage/install/](ht
 
 <!-- ###  Observability menggunakan [OpenTelemetry](https://opentelemetry.io/) -->
 
+## Golang Test
+
+### Testing
+
+Untuk testing biasa cukup dengan ini.
+
+```bash
+go test ./...
+```
+
+### Coverage
+
+Untuk mendapatkan test coverage bisa dengan syntax ini.
+
+```bash
+ go test -covermode=count  -coverprofile=coverage.out ./...
+ go tool cover -html=coverage.out -o coverage.html
+```
