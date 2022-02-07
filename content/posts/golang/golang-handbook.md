@@ -350,3 +350,183 @@ Untuk mendapatkan test coverage bisa dengan syntax ini.
  go test -covermode=count  -coverprofile=coverage.out ./...
  go tool cover -html=coverage.out -o coverage.html
 ```
+
+## [Go migrate](https://github.com/golang-migrate/migrate)
+
+Salah satu tools yang sangat membantu terutama pada saat proses development adalah go migrate.
+
+Go migrate membantu kita untuk melakukan migrasi database cukup dengan mengetikan beberapa syntax.
+
+### Install
+
+```bash
+go get -v -u  github.com/golang-migrate/migrate
+migrate -v
+```
+
+### Generate Migration
+
+```bash
+migrate create -ext sql -dir db/migrations -seq create_users_table
+```
+
+Nanti akan menghasilkan file
+
+```bash
+1481574547_create_users_table.up.sql
+1481574547_create_users_table.down.sql
+```
+
+### Migrate skema yang sudah ada
+
+#### Buat database dan koneksikan ke gomigrate
+
+```bash
+export POSTGRESQL_URL='postgres://postgres:password@localhost:5432/example?sslmode=disable'
+```
+
+
+#### Lakukan Migrate
+
+```bash
+migrate -database POSTGRESQL_URL -path PATH_TO_YOUR_MIGRATIONS up
+```
+
+## [SQLC](https://sqlc.dev/)
+
+Generator untuk membuat SQL Command, Ini sangat membantu untuk kita yang terbiasa menggunakan SQL dibanding orm.
+sqlc akan mengenerate code berdasarkan kode sql yang kita buat
+
+### Install
+
+- GO VERSION >= 1.17
+
+```bash
+go install github.com/kyleconroy/sqlc/cmd/sqlc@latest
+```
+
+- DO VERSION < 1.17
+
+```bash
+go get github.com/kyleconroy/sqlc/cmd/sqlc
+```
+### Cara menggunakan
+
+1. Buat sqlc config file `sqlc.yaml`
+	
+	```yaml
+		version: 1
+		packages:
+		- name: "db"
+			path: "db"
+			queries: "./query/"
+			schema: "../../../db/migrations/"
+			engine: "postgresql"
+			sql_package: "pgx/v4"
+			emit_prepared_queries: true
+			emit_interface: false
+			emit_exact_table_names: false
+			emit_empty_slices: false
+			emit_json_tags: true
+	```
+
+2. Buat folder `query` dan isi query yang ingin kita generate dengan nama `author.sql`
+
+	```bash
+		-- name: GetAuthor :one
+		SELECT * FROM authors
+		WHERE id = $1 LIMIT 1;
+
+		-- name: ListAuthors :many
+		SELECT * FROM authors
+		ORDER BY name;
+
+		-- name: CreateAuthor :one
+		INSERT INTO authors (
+				name, bio
+		) VALUES (
+		$1, $2
+		)
+		RETURNING *;
+
+		-- name: DeleteAuthor :exec
+		DELETE FROM authors
+		WHERE id = $1;
+	```
+
+
+3. Lalu generate
+
+	```bash
+		sqlc generate
+	```
+
+4. Kita akan mendapatkan beberapa file pada folder db, yaitu:
+	- db.go
+	- models.go
+	- table_name
+
+## [GORM Generator](https://github.com/go-gorm/gen)
+
+Ketika kita menggunakan gorm, akan ada beberapa task yang membosankan misalnya ketika membuat models.
+Dengan menggunakan gorm generator kita bisa mengenerate table menjadi models dengan cepat.
+
+### Cara install
+
+## Database on docker
+
+### Run PostgreSQL
+
+```bash
+docker run --rm --name pg-docker -e POSTGRES_PASSWORD=postgres -d -p 5432 postgres
+```
+
+#### Buat Database
+
+```bash
+docker exec -it pg-docker psql -U postgres -c "CREATE DATABASE myservicedb ENCODING 'utf8' TEMPLATE template0 LC_COLLATE 'C' LC_CTYPE 'C';"
+docker exec -it pg-docker psql -U postgres -c "GRANT ALL PRIVILEGES ON DATABASE postgres TO postgres;"
+```
+
+## Troubleshooting
+
+### [pgtype](https://github.com/jackc/pgtype)
+
+#### cannot encode status undefined
+
+Ada issue dapet error karena status undefined, ini terjadi karena belum melakukan `Set` kepada variable tipe itu.
+
+Contoh
+
+- Negative Case
+
+```go
+	// postgre type numeric akan menggunakan type pgtype.Numeric
+	var price pgtype.Numeric
+
+	// ketika disave, akan return err `cannot encode status undefined`
+	db.Save(&Order{
+		ID: input.ID,
+		Price: price
+	})
+
+```
+
+- Fix
+
+Ini terjadi karena kita belum set value untuk `price`
+
+```go
+	// postgre type numeric akan menggunakan type pgtype.Numeric
+	var price pgtype.Numeric
+
+	if err := price.Set(input.Price); err != nil {
+		return err
+	}
+
+	// ketika disave, akan return err `cannot encode status undefined`
+	db.Save(&Order{
+		ID: input.ID,
+		Price: price
+	})
+```
